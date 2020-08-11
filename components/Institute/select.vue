@@ -7,7 +7,7 @@
         </nuxt-link>
 
         <h1 id="title">
-          Select a finacial institution 🏦
+          Select a financial institution 🏦
         </h1>
         <div class="search-holder">
           <img src="img/search 1.svg" class="search-icon" />

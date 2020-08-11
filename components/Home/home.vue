@@ -6,7 +6,7 @@
           <img src="img/logo.png" />
         </div>
         <h1 id="title">
-          Muney links all your finance apps
+          Litho links all your finance apps
         </h1>
         <p class="subtitle">
           Click “Select Account” to continue
@@ -17,14 +17,14 @@
               <img src="img/Checkmark.png" />
               <div>
                 <p>Secure</p>
-                <p>100% data security on Mono app</p>
+                <p>100% data security on Litho app</p>
               </div>
             </li>
             <li>
               <img src="img/Checkmark.png" />
               <div>
                 <p>Private by design</p>
-                <p>100% data security on Mono app</p>
+                <p>100% data security on Litho app</p>
               </div>
             </li>
             <li>
@@ -43,7 +43,7 @@
         </nuxt-link>
         <div class="powered">
           <button>
-            Powered with Mono
+            Powered with Litho
           </button>
         </div>
       </div>

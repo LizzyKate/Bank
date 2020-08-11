@@ -22,7 +22,7 @@
           Account Linked!
         </h1>
         <p class="subtitle">
-          Your bank account has been succesfully linked to <b> Muney. </b>
+          Your bank account has been succesfully linked to <b> Litho. </b>
         </p>
         <nuxt-link to="/Institution">
           <button class="select_account">

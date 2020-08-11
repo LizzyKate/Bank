@@ -9,6 +9,11 @@ export default {
   components: {
     Home,
   },
+  transition(to, from) {
+    if (to) {
+      return 'slide-fade'
+    }
+  },
 }
 </script>
 <style scoped></style>
