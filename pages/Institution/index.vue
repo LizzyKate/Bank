@@ -1,13 +1,13 @@
 <template>
   <div>
-    <Home />
+    <Select />
   </div>
 </template>
 <script>
-import Home from '~/components/Home/home'
+import Select from '~/components/Institute/select'
 export default {
   components: {
-    Home,
+    Select,
   },
 }
 </script>

@@ -1,13 +1,13 @@
 <template>
   <div>
-    <Home />
+    <Bank />
   </div>
 </template>
 <script>
-import Home from '~/components/Home/home'
+import Bank from '~/components/Bank/bank'
 export default {
   components: {
-    Home,
+    Bank,
   },
 }
 </script>
