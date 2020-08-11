@@ -92,6 +92,7 @@ main>div {
   background: #101326;
   padding: 16px 24px;
   border-radius: 19.2px;
+  cursor: pointer;
 }
 
 .search-holder {
@@ -308,4 +309,125 @@ form {
 
 .box-container div {
   z-index: 8;
+}
+
+.change {
+  background-color: gray;
+  min-height: 100vh;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.send {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+.pic img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.greet {
+  margin-left: 1.5rem;
+}
+
+.money {
+  font-size: 12px;
+  color: #101326;
+  cursor: pointer;
+}
+
+.balance {
+  background-color: indigo;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 10px;
+  min-height: 6rem;
+  padding: 3rem;
+}
+
+.describe p {
+  color: #ffffff;
+  font-size: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.naira {
+  color: #ffffff;
+}
+
+.cashBook {
+  margin-top: 3rem;
+}
+
+.transactions {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.date p {
+  font-size: 12px;
+  margin-left: 1rem
+}
+
+.modify {
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.detail {
+
+  display: flex;
+  flex-direction: column;
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: 1rem;
+
+}
+
+.person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity p {
+  font-size: 14px;
+}
+
+.time p {
+  color: gray;
+  font-size: 12px;
+}
+
+.line {
+  width: 100%;
+  border: 1px solid gray;
+  height: 1px;
 }

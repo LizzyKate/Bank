@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main id="swup" class="transition-fade">
+    <main>
       <div id="link" class="container">
         <div class="box-container">
           <div class="box-1"></div>
@@ -24,16 +24,18 @@
         <p class="subtitle">
           Your bank account has been succesfully linked to <b> Litho. </b>
         </p>
-        <nuxt-link to="/Institution">
+        <nuxt-link to="/Login">
           <button class="select_account">
             Continue
           </button>
         </nuxt-link>
 
         <div class="powered">
-          <button>
-            Link another account
-          </button>
+          <nuxt-link to="/Institution">
+            <button>
+              Link another account
+            </button>
+          </nuxt-link>
         </div>
       </div>
     </main>

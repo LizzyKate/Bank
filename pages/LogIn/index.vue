@@ -1,13 +1,13 @@
 <template>
   <div>
-    <Link />
+    <Login />
   </div>
 </template>
 <script>
-import Link from '~/components/Link/link'
+import Login from '~/components/Login/log'
 export default {
   components: {
-    Link,
+    Login,
   },
   transition(to, from) {
     if (to) {

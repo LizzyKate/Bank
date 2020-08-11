@@ -25,19 +25,14 @@
 
             <input id="password" type="password" class="search" />
           </div>
-          <div>
-            <label for="password"> Image </label>
-
-            <input id="File" type="file" class="search" />
-          </div>
-          <nuxt-link to="/Link">
+          <nuxt-link to="/Transaction">
             <button class="select_account">
-              Link Account
+              Login
             </button>
           </nuxt-link>
-          <nuxt-link to="/Login">
+          <nuxt-link to="/Bank">
             <button class="select_account">
-              Already linked your account ? Log In
+              Don't Have A Linked Account? Link Your Account
             </button>
           </nuxt-link>
         </form>
