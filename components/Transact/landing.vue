@@ -4,17 +4,21 @@
       <div class="container">
         <div class="profile">
           <div class="send">
-            <div class="name">
-              <div class="pic">
-                <img src="img/profile-small-1.jpg" class="" alt="" />
+            <nuxt-link :to="'/Profile/' + pic.accountId" class="remove">
+              <div class="name">
+                <div class="pic">
+                  <img :src="`/img/${pic.pic}`" class="" alt="" />
+                </div>
+                <div class="greet">
+                  <h5>Hi, {{ pic.userName }}</h5>
+                </div>
               </div>
-              <div class="greet">
-                <h5>Hi Jhon Doe</h5>
+            </nuxt-link>
+            <nuxt-link to="/Send" class="money">
+              <div class="">
+                <p>Send Money</p>
               </div>
-            </div>
-            <div class="money">
-              <p>Send Money</p>
-            </div>
+            </nuxt-link>
           </div>
           <div class="balance">
             <div class="describe">
@@ -49,7 +53,7 @@
                           <h5>{{ detail.name }}</h5>
                         </div>
                         <div>
-                          <h6>{{ detail.amount }}</h6>
+                          <h6>#{{ detail.amount }}</h6>
                         </div>
                       </div>
                       <div class="activity">
@@ -80,6 +84,9 @@ export default {
   computed: {
     payment() {
       return this.$store.state.pay.Info
+    },
+    pic() {
+      return this.$store.state.pay.image
     },
   },
 }

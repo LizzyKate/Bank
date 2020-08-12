@@ -1,4 +1,9 @@
 export const state = () => ({
+  image: {
+    pic: 'profile-small-1.jpg',
+    userName: 'Jhon Doe',
+    accountId: 12,
+  },
   Info: [
     {
       daily: [

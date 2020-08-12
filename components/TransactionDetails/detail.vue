@@ -90,44 +90,6 @@ export default {
       type: Object,
       required: true,
     },
-    // name: {
-    //   type: String,
-    //   required: true,
-    // },
-    // time: {
-    //   type: String,
-    //   required: true,
-    // },
-    // date: {
-    //   type: String,
-    //   required: true,
-    // },
-    // paid: {
-    //   type: Boolean,
-    //   required: true,
-    // },
-    // from: {
-    //   type: Number,
-    //   required: true,
-    // },
-    // category: {
-    //   type: String,
-    //   required: true,
-    // },
-    // amount: {
-    //   type: Number,
-    //   required: true,
-    // },
-  },
-  data() {
-    return {
-      // Reciept: {
-      //   date: 'Aug ' + 2 + ' at' + 12 + ':' + 22 + ' PM',
-      //   method: 'Money Recieved',
-      //   accountId: 1,
-      //   category: 'Transfer',
-      // },
-    }
   },
 }
 </script>

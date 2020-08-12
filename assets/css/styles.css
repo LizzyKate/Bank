@@ -347,6 +347,10 @@ form {
   color: #ffffff;
 }
 
+.money {
+  text-decoration: none !important;
+}
+
 .money p {
   font-size: 12px;
   color: #ffffff;
@@ -487,4 +491,48 @@ form {
 .id,
 .category {
   margin-top: 1rem;
+}
+
+.decide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.send button {
+  padding: 10px 35px !important;
+  border-radius: 15px !important;
+}
+
+.cancel button {
+  padding: 10px 35px !important;
+  border-radius: 17px !important;
+}
+
+.identification {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  text-align: center;
+}
+
+.accountName h5,
+.accountId {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#special button {
+  background-color: rgba(16, 19, 38, 0.13333) !important;
+  padding: 10px 35px !important;
+  border-radius: 10px !important;
+  font-weight: bold !important;
+}
+
+.logOut {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
