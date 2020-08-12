@@ -39,27 +39,32 @@
                   :key="b"
                   class="detail"
                 >
-                  <div class="first">
-                    <div class="person">
-                      <div>
-                        <h5>{{ detail.name }}</h5>
+                  <nuxt-link
+                    :to="'/TransactionDetail/' + detail.accountId"
+                    class="remove"
+                  >
+                    <div class="first">
+                      <div class="person">
+                        <div>
+                          <h5>{{ detail.name }}</h5>
+                        </div>
+                        <div>
+                          <h6>{{ detail.amount }}</h6>
+                        </div>
                       </div>
-                      <div>
-                        <h6>{{ detail.amount }}</h6>
+                      <div class="activity">
+                        <div v-if="detail.paid">
+                          <p>Paid</p>
+                        </div>
+                        <div v-else>
+                          <p>Recieved</p>
+                        </div>
+                      </div>
+                      <div class="time">
+                        <p>{{ detail.time }}</p>
                       </div>
                     </div>
-                    <div class="activity">
-                      <div v-if="detail.paid">
-                        <p>Paid</p>
-                      </div>
-                      <div v-else>
-                        <p>Recieved</p>
-                      </div>
-                    </div>
-                    <div class="time">
-                      <p>{{ detail.time }}</p>
-                    </div>
-                  </div>
+                  </nuxt-link>
                   <div class="line"></div>
                 </div>
               </div>

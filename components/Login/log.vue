@@ -3,7 +3,7 @@
     <main class="gtb">
       <div class="container">
         <div class="back">
-          <nuxt-link to="/Institution">
+          <nuxt-link to="/Bank">
             <img src="img/back.svg" />
           </nuxt-link>
         </div>
@@ -28,11 +28,6 @@
           <nuxt-link to="/Transaction">
             <button class="select_account">
               Login
-            </button>
-          </nuxt-link>
-          <nuxt-link to="/Bank">
-            <button class="select_account">
-              Don't Have A Linked Account? Link Your Account
             </button>
           </nuxt-link>
         </form>

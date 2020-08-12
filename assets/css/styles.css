@@ -343,9 +343,13 @@ form {
   margin-left: 1.5rem;
 }
 
-.money {
+.greet h5 {
+  color: #ffffff;
+}
+
+.money p {
   font-size: 12px;
-  color: #101326;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -389,7 +393,8 @@ form {
 
 .date p {
   font-size: 12px;
-  margin-left: 1rem
+  margin-left: 1rem;
+  color: #ffffff;
 }
 
 .modify {
@@ -403,11 +408,17 @@ form {
   flex-direction: column;
 }
 
+.remove {
+  color: black !important;
+  text-decoration: none !important;
+}
+
 .first {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   margin-top: 1rem;
+  /* cursor: pointer; */
 
 }
 
@@ -428,6 +439,52 @@ form {
 
 .line {
   width: 100%;
-  border: 1px solid gray;
-  height: 1px;
+  border: 0.5px solid gray;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lined {
+  margin-top: 1rem;
+  width: 100%;
+  border: 0.5px solid #ffffff;
+}
+
+.benefactor {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.identity p {
+  font-size: 15px;
+}
+
+.reciept {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.session {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.from p {
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+.paidOn,
+.method,
+.id,
+.category {
+  margin-top: 1rem;
 }
