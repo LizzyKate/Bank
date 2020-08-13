@@ -17,16 +17,25 @@
         </h1>
         <form class="form">
           <div>
-            <label for="name"> GTBank User ID: </label>
-            <input id="name" class="search" value="John Doe" />
+            <label for="name"> Name: </label>
+            <input id="name" v-model="name" class="search" type="text" />
           </div>
           <div>
             <label for="password"> Password </label>
 
-            <input id="password" type="password" class="search" />
+            <input
+              id="password"
+              v-model="password"
+              type="password"
+              class="search"
+            />
           </div>
           <nuxt-link to="/Transaction">
-            <button class="select_account">
+            <button
+              class="select_account"
+              :disabled="authenticate"
+              :class="{ dim: authenticate === true }"
+            >
               Login
             </button>
           </nuxt-link>
@@ -36,6 +45,26 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      name: '',
+      password: '',
+    }
+  },
+  computed: {
+    authenticate() {
+      if (this.name !== '' && this.password !== '') {
+        return false
+      } else {
+        return true
+      }
+    },
+  },
+}
 </script>
-<style scoped></style>
+<style scoped>
+.dim {
+  opacity: 0.5;
+}
+</style>

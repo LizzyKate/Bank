@@ -32,7 +32,10 @@
             </div>
             <div class="logOut">
               <div id="special" class="powered">
-                <button>
+                <button
+                  :disabled="authenticate"
+                  :class="{ dim: authenticate === true }"
+                >
                   Update
                 </button>
               </div>
@@ -64,7 +67,20 @@ export default {
       const propertyValue = Object.values(move)
       return propertyValue
     },
+    authenticate() {
+      if (this.name === 'Jhon Doe' && this.pass === 12345) {
+        return true
+      } else if (this.name !== '' && this.pass !== '') {
+        return false
+      } else {
+        return true
+      }
+    },
   },
 }
 </script>
-<style scoped></style>
+<style scoped>
+.dim {
+  opacity: 0.5;
+}
+</style>
