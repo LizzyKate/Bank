@@ -15,10 +15,10 @@
         <h1 id="title">
           GTBank Internet Banking
         </h1>
-        <form class="form">
+        <form class="form" @submit.prevent="submit">
           <div>
-            <label for="name"> Name: </label>
-            <input id="name" v-model="name" class="search" type="text" />
+            <label for="email"> Name: </label>
+            <input id="email" v-model="email" class="search" type="email" />
           </div>
           <div>
             <label for="password"> Password </label>
@@ -30,15 +30,16 @@
               class="search"
             />
           </div>
-          <nuxt-link to="/Transaction">
-            <button
-              class="select_account"
-              :disabled="authenticate"
-              :class="{ dim: authenticate === true }"
-            >
-              Login
-            </button>
-          </nuxt-link>
+          <!-- <nuxt-link to="/Transaction"> -->
+          <button
+            class="select_account"
+            :disabled="authenticate"
+            :class="{ dim: authenticate === true }"
+            type="submit"
+          >
+            Login
+          </button>
+          <!-- </nuxt-link> -->
         </form>
       </div>
     </main>
@@ -48,16 +49,30 @@
 export default {
   data() {
     return {
-      name: '',
+      email: '',
       password: '',
     }
   },
   computed: {
     authenticate() {
-      if (this.name !== '' && this.password !== '') {
+      if (this.email !== '' && this.password !== '') {
         return false
       } else {
         return true
+      }
+    },
+  },
+  methods: {
+    async submit() {
+      const data = {
+        email: this.email,
+        password: this.password,
+      }
+      try {
+        const response = await this.$axios.$post('/signin', data)
+        console.log(response)
+      } catch (error) {
+        console.log(error)
       }
     },
   },
