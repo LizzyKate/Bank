@@ -14,6 +14,7 @@ export default {
       return 'slide-fade'
     }
   },
+  middleware: ['auth'],
 }
 </script>
 <style scoped></style>

@@ -15,9 +15,10 @@
         <h1 id="title">
           GTBank Internet Banking
         </h1>
+        <notifications group="foo" position="top center" />
         <form class="form" @submit.prevent="submit">
           <div>
-            <label for="email"> Name: </label>
+            <label for="email"> Email: </label>
             <input id="email" v-model="email" class="search" type="email" />
           </div>
           <div>
@@ -64,6 +65,7 @@ export default {
   },
   methods: {
     async submit() {
+      this.$store.commit('spin/loading', true)
       const data = {
         email: this.email,
         password: this.password,
@@ -71,9 +73,27 @@ export default {
       try {
         const response = await this.$axios.$post('/signin', data)
         console.log(response)
+        localStorage.setItem('auth-token', response.data)
+        this.$router.push('/Transaction')
       } catch (error) {
-        console.log(error)
+        console.log(error.response)
+        if (error.response?.data?.error) {
+          this.$notify({
+            group: 'foo',
+            title: 'Important Message',
+            type: 'error',
+            text: error.response.data.error,
+          })
+        } else {
+          this.$notify({
+            group: 'foo',
+            title: 'Important Message',
+            type: 'error',
+            text: 'An Error Occured',
+          })
+        }
       }
+      this.$store.commit('spin/loading', false)
     },
   },
 }

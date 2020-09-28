@@ -4,13 +4,13 @@
       <div class="container">
         <div class="profile">
           <div class="send">
-            <nuxt-link :to="'/Profile/' + pic.accountId" class="remove">
+            <nuxt-link :to="'/Profile/' + user._id" class="remove">
               <div class="name">
                 <div class="pic">
                   <img :src="`/img/${pic.pic}`" class="" alt="" />
                 </div>
                 <div class="greet">
-                  <h5>Hi, {{ pic.userName }}</h5>
+                  <h5>Hi, {{ user.name }}</h5>
                 </div>
               </div>
             </nuxt-link>
@@ -25,7 +25,7 @@
               <p>Account Balance</p>
             </div>
             <div class="naira">
-              <h4>#20000.00</h4>
+              <h4>#{{ user.total }}</h4>
             </div>
           </div>
           <div v-for="(transact, i) in payment" :key="i" class="cashBook">
@@ -81,6 +81,11 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      user: {},
+    }
+  },
   computed: {
     payment() {
       return this.$store.state.pay.Info
@@ -88,6 +93,17 @@ export default {
     pic() {
       return this.$store.state.pay.image
     },
+  },
+  async mounted() {
+    this.$store.commit('spin/loading', true)
+    try {
+      const response = await this.$axios.$get('/user')
+      this.user = response.data
+      console.log(response)
+    } catch (error) {
+      console.log(error.response)
+    }
+    this.$store.commit('spin/loading', false)
   },
 }
 </script>

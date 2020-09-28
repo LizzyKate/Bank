@@ -15,6 +15,7 @@
         <h1 id="title">
           GTBank Internet Banking
         </h1>
+        <notifications group="foo" position="top center" />
         <form class="form" @submit.prevent="submit">
           <div>
             <label for="name"> Name </label>
@@ -153,13 +154,31 @@ export default {
         phone: this.phone,
         middleName: this.middleName,
       }
+      this.$store.commit('spin/loading', true)
       try {
         const response = await this.$axios.$post('/signup', data)
         console.log(response)
-        // localStorage.setItem('auth-token', response.data.token)
+        localStorage.setItem('auth-token', response.data.token)
+        this.$router.push('/Link')
       } catch (error) {
-        console.log(error)
+        console.log(error.response)
+        if (error.response?.data?.error) {
+          this.$notify({
+            group: 'foo',
+            title: 'Important Message',
+            type: 'error',
+            text: error.response.data.error,
+          })
+        } else {
+          this.$notify({
+            group: 'foo',
+            title: 'Important Message',
+            type: 'error',
+            text: 'An Error Occured',
+          })
+        }
       }
+      this.$store.commit('spin/loading', false)
     },
   },
 }
